@@ -8,8 +8,8 @@
 
   `ffmpeg -i vid.mov -vframes 1 -s 320x240 -ss 10 thumb.jpg`
 
-  *-vframes  Single Frame*<br/>
-  *-ss       Offset*
+  -vframes  *Single Frame*<br/>
+  -ss       *Offset*
 
   `ffmpeg -i rtmp://streamurl -r 1 frames/%04d-frame.png`
 
