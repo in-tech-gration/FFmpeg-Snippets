@@ -4,7 +4,7 @@
 
 > FFMPEG is a video and audio converter as well as a live video/audio capture program with on-the-fly conversion capabilities.
 
-### GRAB FRAME THUMBNAIL    
+#### GRAB FRAME THUMBNAIL    
 
   `ffmpeg -i vid.mov -vframes 1 -s 320x240 -ss 10 thumb.jpg`
 
