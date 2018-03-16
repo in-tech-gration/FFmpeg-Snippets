@@ -4,6 +4,8 @@
 
 > FFMPEG is a video and audio converter as well as a live video/audio capture program with on-the-fly conversion capabilities.
 
+Installation: [Windows](https://www.wikihow.com/Install-FFmpeg-on-Windows) [Linux](https://askubuntu.com/questions/426543/install-ffmpeg-in-ubuntu-12-04-lts?rq=1) [Mac](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg/wiki/Installing-ffmpeg-on-Mac-OS-X)
+
 Table of contents
 =================
 
