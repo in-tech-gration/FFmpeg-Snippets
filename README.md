@@ -10,7 +10,8 @@ Table of contents
    * [Grab Frame Thumbnail](#grab-frame-thumbnail)
    * [Add Audio Track](#add-audio-track)
 
-GRAB FRAME THUMBNAIL    
+
+Grab Frame Thumbnail    
 ====================
 
   `$ ffmpeg -i input.mov -vframes 1 -s 320x240 -ss 10 thumb.jpg`
@@ -22,7 +23,7 @@ GRAB FRAME THUMBNAIL
 
   This will consume the stream at rtmp://streamurl and output it as one PNG per second.
 
-ADD AUDIO TRACK
+Add Audio Track
 ===============
 
   `$ ffmpeg.exe -i input.flv -i input.audio.m4a -vcodec copy -acodec copy -map 0:0 -map 1:0 output.flv`
