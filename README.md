@@ -13,7 +13,9 @@ Table of contents
    * [Grab Frame Thumbnail](#grab-frame-thumbnail)
    * [Add Audio Track](#add-audio-track)
    * [Format Conversion](#format-conversion)
-
+   * [Join MP3 Files](#join-mp3-files)
+   * [Mix a Video with a Sound File](#mix-a-video-with-a-sound-file)
+   
 
 Get Video Information
 =====================
@@ -52,3 +54,15 @@ Format Conversion
   FLV to MPEG4
   
   `$ ffmpeg -i input.flv -acodec copy output.mp4`
+
+
+Join MP3 Files
+==============
+
+  `$ ffmpeg -i "concat:file1.mp3|file2.mp3" -acodec copy output.mp3`
+
+
+Mix a Video with a Sound file
+=============================
+
+  `$ ffmpeg -i audio.wav -i video.avi output.mpg`
