@@ -4,13 +4,25 @@
 
 > FFMPEG is a video and audio converter as well as a live video/audio capture program with on-the-fly conversion capabilities.
 
-#### GRAB FRAME THUMBNAIL    
+Table of contents
+=================
 
-  `ffmpeg -i vid.mov -vframes 1 -s 320x240 -ss 10 thumb.jpg`
+   * [Grab Frame Thumbnail](#grab-frame-thumbnail)
+   * [Add Audio Track](#add-audio-track)
+
+GRAB FRAME THUMBNAIL    
+====================
+
+  `$ ffmpeg -i input.mov -vframes 1 -s 320x240 -ss 10 thumb.jpg`
 
   -vframes  *Single Frame*<br/>
   -ss       *Offset*
 
-  `ffmpeg -i rtmp://streamurl -r 1 frames/%04d-frame.png`
+  `$ ffmpeg -i rtmp://streamurl -r 1 frames/%04d-frame.png`
 
   This will consume the stream at rtmp://streamurl and output it as one PNG per second.
+
+ADD AUDIO TRACK
+===============
+
+  `$ ffmpeg.exe -i input.flv -i input.audio.m4a -vcodec copy -acodec copy -map 0:0 -map 1:0 output.flv`
