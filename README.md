@@ -170,7 +170,7 @@ Create a Video with Audio from an Image Still
 
   CREATE A 66" VIDEO FROM THE IMAGE
 
-  `$ cat `for i in $(seq 1 66); do echo -n " black_still.jpg "; done;` | ffmpeg -r 1 -f mjpeg -i - -r 1 out1.mp4`
+  `$ cat ``for i in $(seq 1 66); do echo -n " black_still.jpg "; done;`` | ffmpeg -r 1 -f mjpeg -i - -r 1 out1.mp4`
 
   TRIM THE MP3 FILE TO KEEP THE FIRST 66" OF AUDIO
 
