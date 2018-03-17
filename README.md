@@ -25,6 +25,7 @@ Table of contents
    * [Encode Video Portion](#encode-video-portion)
    * [Replace Audio in a Video File](#replace-audio-in-a-video-file)
    * [Audio Slow Down](#audio-slow-down)
+   * [Create a Video with Audio from an Image Still](#create-a-video-with-audio-from-an-image-still)
 
 
 Get Video Information
@@ -158,3 +159,23 @@ Audio Slow Down
 ===============
 
   `$ ffmpeg -i input.mp4 -filter:a "atempo=0.5" -vn output.aac`
+
+
+Create a Video with Audio from an Image Still
+=============================================
+
+  Given an image and an audio file, creates a video which is basically a still from the image with the audio file in the background.
+
+  The 66 below represents the length of the audio in seconds. 
+
+  CREATE A 66" VIDEO FROM THE IMAGE
+
+  `$ cat `for i in $(seq 1 66); do echo -n " black_still.jpg "; done;` | ffmpeg -r 1 -f mjpeg -i - -r 1 out1.mp4`
+
+  TRIM THE MP3 FILE TO KEEP THE FIRST 66" OF AUDIO
+
+  `$ ffmpeg -i audio.mp3 -t 66 -acodec copy output.mp3`
+
+  MIX AUDIO AND VIDEO
+
+  `$ ffmpeg -i out1.mp4 -i output.mp3 -vcodec copy finish.mp4`
