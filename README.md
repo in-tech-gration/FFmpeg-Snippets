@@ -129,7 +129,8 @@ Export Audio
   `$ ffmpeg -i input.flv [-b:a 192K -vn] music.mp3`
 
   MP4 -> FLAC             
-  $ ffmpeg -i audio.xxx -c:a flac audio.flac
+
+  `$ ffmpeg -i audio.xxx -c:a flac audio.flac`
 
 
 Show Video Information as JSON
