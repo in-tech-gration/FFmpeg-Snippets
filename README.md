@@ -17,6 +17,7 @@ Table of contents
    * [Mix a Video with a Sound File](#mix-a-video-with-a-sound-file)
    * [Trim and Cut](#trim-and-cut)
    * [Capture Video](#capture-video) [Linux]
+   * [Export Audio](#export-audio)
   
 
 Get Video Information
@@ -98,4 +99,31 @@ Capture Video
   [Linux]
 
   `$ ffmpeg -f x11grab -s wxga -r 25 -i :0.0 -sameq /tmp/output.mpg`
+
+
+Export Audio
+============ 
+
+  `$ ffmpeg -i audio.aac outpuf.aiff`
+  
+  `$ ffmpeg -i video.avi -vcodec copy -acodec copy -ss 00:00:00 -t 00:00:04 trimmed_video.avi`
+
+  FLV -> MP3              
+
+  `$ ffmpeg -i input.flv -acodec libmp3lame -aq 4 output.mp3`
+
+  FLV -> WAV             
+  
+  `$ ffmpeg -i input.flv -vn -f wav output.wav`
+
+  MP4 -> MP4-AUDIO        
+
+  `$ ffmpeg -i input.flv -c copy -map 0:a output_audio.mp4`
+
+  MP4 -> MP3
+
+  `$ ffmpeg -i input.flv [-b:a 192K -vn] music.mp3`
+
+  MP4 -> FLAC             
+  $ ffmpeg -i audio.xxx -c:a flac audio.flac
 
