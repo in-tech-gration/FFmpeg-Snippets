@@ -73,7 +73,11 @@ Convert Video to MP3
 
   MP3 Quality => 320k 
 
-  `$ ffmpeg -i input.flv -ab 320k output.mp3`
+  `$ ffmpeg -i video.flv -ab 320k output.mp3`
+
+  `$ ffmpeg -i video.avi -f mp3 audio.mp3`
+
+  -f <fmt> *Force the format*
 
 
 Join MP3 Files
