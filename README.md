@@ -21,6 +21,7 @@ Table of contents
    * [Trim and Cut](#trim-and-cut)
    * [Capture Video](#capture-video) [Linux]
    * [Export Audio](#export-audio)
+   * [Show Video Information as JSON](#show-video-information-as-json)
   
 
 Get Video Information
@@ -130,3 +131,8 @@ Export Audio
   MP4 -> FLAC             
   $ ffmpeg -i audio.xxx -c:a flac audio.flac
 
+
+Show Video Information as JSON
+==============================
+
+  `$ ffprobe -v quiet -print_format json -show_format -show_streams somefile.asf` 
