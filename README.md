@@ -75,11 +75,17 @@ Trim and Cut
 
   REMOVE FIRST 30" FROM AN MP3 FILE
 
-  `$ ffmpeg -ss 30 -i input.mp3 -acodec copy output.mp3`
+  `$ ffmpeg -i input.mp3 -ss 30 -acodec copy output.mp3`
 
   KEEP FIRST 30" OF A VIDEO FILE
 
   `$ ffmpeg -i input.mkv -t 30 -acodec copy -vcodec copy output.mkv`
+
+  KEEP FIRST 30" OF AN MP3 FILE
+
+  -t 30 *Keep only first 30 seconds*
+
+  `$ ffmpeg -i input.mp3 -t 30 -acodec copy output.mp3`
 
   General Syntax: 
   `$ ffmpeg -i [input file] -ss hh:mm:ss[.xxx] -t [duration in seconds or 
