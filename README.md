@@ -96,6 +96,12 @@ Trim and Cut
 
   `$ ffmpeg -i input.mp3 -t 30 -acodec copy output.mp3`
 
+  TRIM USING START AND END POSITION
+
+  `$ ffmpeg -i input.mp4 -ss 00:00:03.000 -to 00:00:11.000 -c copy output.mp4`
+
+  -ss and -to *Using start and end position*
+
   General Syntax: 
   `$ ffmpeg -i [input file] -ss hh:mm:ss[.xxx] -t [duration in seconds or 
   hh:mm:ss[.xxx]] -vcodec copy -acodec copy [output file]`
