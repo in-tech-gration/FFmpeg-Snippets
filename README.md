@@ -24,6 +24,7 @@ Table of contents
    * [Show Video Information as JSON](#show-video-information-as-json)
    * [Encode Video Portion](#encode-video-portion)
    * [Replace Audio in a Video File](#replace-audio-in-a-video-file)
+   * [Audio Slow Down](#audio-slow-down)
 
 
 Get Video Information
@@ -151,3 +152,9 @@ Replace Audio in a Video File
 =============================
 
   `$ ffmpeg -i video.avi -i audio.mp3  -map 0.0:1 -map 1:0 -f avi -vcodec copy -acodec copy output.avi`
+
+
+Audio Slow Down
+===============
+
+  `$ ffmpeg -i input.mp4 -filter:a "atempo=0.5" -vn output.aac`
