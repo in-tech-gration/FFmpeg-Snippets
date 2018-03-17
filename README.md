@@ -6,6 +6,8 @@
 
 Installation: [Windows](https://www.wikihow.com/Install-FFmpeg-on-Windows) | [Linux](https://askubuntu.com/questions/426543/install-ffmpeg-in-ubuntu-12-04-lts?rq=1) | [Mac](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg/wiki/Installing-ffmpeg-on-Mac-OS-X)
 
+General Syntax: `ffmpeg [input file options] -i <input_file> [output file options] <outfile>`
+
 References: [19 ffmpeg commands for all needs
 ](https://www.catswhocode.com/blog/19-ffmpeg-commands-for-all-needs)
 
@@ -27,6 +29,7 @@ Table of contents
    * [Replace Audio in a Video File](#replace-audio-in-a-video-file)
    * [Audio Slow Down](#audio-slow-down)
    * [Create a Video with Audio from an Image Still](#create-a-video-with-audio-from-an-image-still)
+   * [Extract Images from a Video](#extract-images-from-a-video)
 
 
 Get Video Information
@@ -198,3 +201,28 @@ Create a Video with Audio from an Image Still
   MIX AUDIO AND VIDEO
 
   `$ ffmpeg -i out1.mp4 -i output.mp3 -vcodec copy finish.mp4`
+
+
+Extract Images from a Video
+===========================
+
+  `$ ffmpeg -i input.mpg image%d.jpg`
+
+  This will create 25 images for every 1 second, but it may serve us to have more or less images, this can be achieved with the parameter -r
+
+  -r fps *Set frame rate (default 25)*
+
+  `$ ffmpeg -i test.mpg -r 1 image%d.jpg`
+
+  With this command you’ll get 1 image for every second.
+
+  You can also give a start time and the duration with the flags:
+
+  -ss position Seek to given time position in seconds. “hh:mm:ss[.xxx]” syntax is also supported.
+
+  -t duration Restrict the transcoded/captured video sequence to the duration specified in seconds. “hh:mm:ss[.xxx]” syntax is also supported.
+
+  This command will take 25 images images every second beginning at the tenth second, and continuing for 5 seconds
+
+  `$ ffmpeg -i test.mpg -r 25 -ss 00:00:10 -t 00:00:05 images%05d.png`
+
