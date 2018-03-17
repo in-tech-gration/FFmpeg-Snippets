@@ -16,7 +16,7 @@ Table of contents
    * [Grab Frame Thumbnail](#grab-frame-thumbnail)
    * [Add Audio Track](#add-audio-track)
    * [Format Conversion](#format-conversion)
-      * [Video to MP3](#video-to-mp3)
+      * [Convert Video to MP3](#convert-video-to-mp3)
    * [Join MP3 Files](#join-mp3-files)
    * [Mix a Video with a Sound File](#mix-a-video-with-a-sound-file)
    * [Trim and Cut](#trim-and-cut)
