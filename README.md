@@ -6,6 +6,9 @@
 
 Installation: [Windows](https://www.wikihow.com/Install-FFmpeg-on-Windows) | [Linux](https://askubuntu.com/questions/426543/install-ffmpeg-in-ubuntu-12-04-lts?rq=1) | [Mac](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg/wiki/Installing-ffmpeg-on-Mac-OS-X)
 
+References: [19 ffmpeg commands for all needs
+](https://www.catswhocode.com/blog/19-ffmpeg-commands-for-all-needs)
+
 Table of contents
 =================
 
