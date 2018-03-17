@@ -23,7 +23,8 @@ Table of contents
    * [Export Audio](#export-audio)
    * [Show Video Information as JSON](#show-video-information-as-json)
    * [Encode Video Portion](#encode-video-portion)
-  
+   * [Replace Audio in a Video File](#replace-audio-in-a-video-file)
+
 
 Get Video Information
 =====================
@@ -144,3 +145,9 @@ Encode Video Portion
 ====================
 
   `$ ffmpeg -i move.avi -ss <StartTime> -t <Duration> OutPutFile.avi`
+
+
+Replace Audio in a Video File
+=============================
+
+  `$ ffmpeg -i video.avi -i audio.mp3  -map 0.0:1 -map 1:0 -f avi -vcodec copy -acodec copy output.avi`
