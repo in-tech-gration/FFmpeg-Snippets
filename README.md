@@ -16,7 +16,8 @@ Table of contents
    * [Join MP3 Files](#join-mp3-files)
    * [Mix a Video with a Sound File](#mix-a-video-with-a-sound-file)
    * [Trim and Cut](#trim-and-cut)
-   
+   * [Capture Video](#capture-video) [Linux]
+  
 
 Get Video Information
 =====================
@@ -83,3 +84,12 @@ Trim and Cut
   General Syntax: 
   `$ ffmpeg -i [input file] -ss hh:mm:ss[.xxx] -t [duration in seconds or 
   hh:mm:ss[.xxx]] -vcodec copy -acodec copy [output file]`
+
+
+Capture Video 
+============= 
+
+  [Linux]
+
+  `$ ffmpeg -f x11grab -s wxga -r 25 -i :0.0 -sameq /tmp/output.mpg`
+
