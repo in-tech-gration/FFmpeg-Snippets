@@ -15,6 +15,7 @@ Table of contents
    * [Format Conversion](#format-conversion)
    * [Join MP3 Files](#join-mp3-files)
    * [Mix a Video with a Sound File](#mix-a-video-with-a-sound-file)
+   * [Trim and Cut](#trim-and-cut)
    
 
 Get Video Information
@@ -66,3 +67,19 @@ Mix a Video with a Sound file
 =============================
 
   `$ ffmpeg -i audio.wav -i video.avi output.mpg`
+
+
+Trim and Cut
+============
+
+  REMOVE FIRST 30" FROM AN MP3 FILE
+
+  `$ ffmpeg -ss 30 -i input.mp3 -acodec copy output.mp3`
+
+  KEEP FIRST 30" OF A VIDEO FILE
+
+  `$ ffmpeg -i input.mkv -t 30 -acodec copy -vcodec copy output.mkv`
+
+  General Syntax: 
+  `$ ffmpeg -i [input file] -ss hh:mm:ss[.xxx] -t [duration in seconds or 
+  hh:mm:ss[.xxx]] -vcodec copy -acodec copy [output file]`
