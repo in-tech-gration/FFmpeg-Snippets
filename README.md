@@ -22,6 +22,7 @@ Table of contents
    * [Capture Video](#capture-video) [Linux]
    * [Export Audio](#export-audio)
    * [Show Video Information as JSON](#show-video-information-as-json)
+   * [Encode Video Portion](#encode-video-portion)
   
 
 Get Video Information
@@ -137,3 +138,9 @@ Show Video Information as JSON
 ==============================
 
   `$ ffprobe -v quiet -print_format json -show_format -show_streams somefile.asf` 
+
+
+Encode Video Portion
+====================
+
+  `$ ffmpeg -i move.avi -ss <StartTime> -t <Duration> OutPutFile.avi`
