@@ -16,7 +16,7 @@ Table of contents
    * [Grab Frame Thumbnail](#grab-frame-thumbnail)
    * [Add Audio Track](#add-audio-track)
    * [Format Conversion](#format-conversion)
-    * [Video to MP3](#video-to-mp3)
+      * [Video to MP3](#video-to-mp3)
    * [Join MP3 Files](#join-mp3-files)
    * [Mix a Video with a Sound File](#mix-a-video-with-a-sound-file)
    * [Trim and Cut](#trim-and-cut)
@@ -67,9 +67,14 @@ Format Conversion
   
   `$ ffmpeg -i input.flv -acodec copy output.mp4`
 
-  Convert Video to MP3 (320k)
+
+Convert Video to MP3
+====================
+
+  MP3 Quality => 320k 
 
   `$ ffmpeg -i input.flv -ab 320k output.mp3`
+
 
 Join MP3 Files
 ==============
