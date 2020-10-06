@@ -32,6 +32,7 @@ Table of contents
    * [Create a Video with Audio from an Image Still](#create-a-video-with-audio-from-an-image-still)
    * [Extract Images from a Video](#extract-images-from-a-video)
    * [Convert DVD to mp4](#convert-video_ts-folder-to-video)
+   * [From left or right-only stereo to mono](#from-left-or-right-only-stereo-to-mono)
 
 Get Video Information
 =====================
@@ -294,3 +295,9 @@ Convert VIDEO_TS folder to video
 
   [References](https://askubuntu.com/questions/86320/how-to-convert-video-ts-folder-to-video-format)
 
+From left or right only stereo to mono
+======================================
+
+  `ffmpeg -i INPUT.mp4 -c:v copy -ac 1 OUTPUT.mp4`
+
+  [References](https://www.youtube.com/watch?v=IyQD6mYqrYA)
