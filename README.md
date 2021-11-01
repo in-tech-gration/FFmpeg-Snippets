@@ -33,6 +33,7 @@ Table of contents
    * [Extract Images from a Video](#extract-images-from-a-video)
    * [Convert DVD to mp4](#convert-video_ts-folder-to-video)
    * [From left or right-only stereo to mono](#from-left-or-right-only-stereo-to-mono)
+   * [Normalize/Boost audio](#normalize-audio)
 
 Get Video Information
 =====================
@@ -301,3 +302,10 @@ From left or right only stereo to mono
   `ffmpeg -i INPUT.mp4 -c:v copy -ac 1 OUTPUT.mp4`
 
   [References](https://www.youtube.com/watch?v=IyQD6mYqrYA)
+
+Normalize (boost) audio
+=======================
+
+  VIDEO: `ffmpeg -i original.mov -af "volume=18dB" -c:v copy -c:a aac -b:a 192k normalized.mov`
+
+  [References](https://superuser.com/questions/323119/how-can-i-normalize-audio-using-ffmpeg)
