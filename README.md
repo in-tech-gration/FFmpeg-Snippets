@@ -159,6 +159,10 @@ Trim and Cut
 
   `$ ffmpeg -i input.mp3 -ss 30 -acodec copy output.mp3`
 
+  Or (using shortcuts:
+
+  `$ ffmpeg -i input.mp3 -ss 30 -c:a copy output.mp3`
+
   KEEP FIRST 30" OF A VIDEO FILE
 
   `$ ffmpeg -i input.mkv -t 30 -acodec copy -vcodec copy output.mkv`
