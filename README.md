@@ -159,7 +159,7 @@ Trim and Cut
 
   `$ ffmpeg -i input.mp3 -ss 30 -acodec copy output.mp3`
 
-  Or (using shortcuts:
+  Or (using the -c shortcut):
 
   `$ ffmpeg -i input.mp3 -ss 30 -c:a copy output.mp3`
 
