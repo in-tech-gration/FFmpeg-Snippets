@@ -1,3 +1,4 @@
+ψ
 ![FFmpeg Snippets](/FFMPEG-Snippets.png)
 
 ## List of useful ffmpeg commands for common tasks
@@ -24,6 +25,7 @@ Table of contents
    * [Trim and Cut](#trim-and-cut)
    * [Resizing Video](#resizing-video)
    * [Capture Video](#capture-video) [Linux]
+   * [Crop Video](#crop-video) [Linux]
    * [Export Audio](#export-audio)
    * [Show Video Information as JSON](#show-video-information-as-json)
    * [Encode Video Portion](#encode-video-portion)
@@ -155,6 +157,12 @@ Mix a Video with a Sound file
 Trim and Cut
 ============
 
+  REMOVE LAST 30" FROM A VIDEO FILE
+
+  Note: Video is 130"
+
+  `ffmpeg -i input.mp4 -c:v copy -c:a copy -to 100 output.mp4`
+
   REMOVE FIRST 30" FROM AN MP3 FILE
 
   `$ ffmpeg -i input.mp3 -ss 30 -acodec copy output.mp3`
@@ -193,6 +201,12 @@ Capture Video
 
   `$ ffmpeg -f x11grab -s wxga -r 25 -i :0.0 -sameq /tmp/output.mpg`
 
+Crop Video 
+========== 
+
+  `$ ffmpeg -i input.mp4 -filter:v "crop=out_w:out_h:x:y" out.mp4`
+
+  For parameters out_w, out_h, x and y see [this SO answer](https://video.stackexchange.com/a/4571/42182)
 
 Export Audio
 ============ 
