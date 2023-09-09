@@ -19,7 +19,7 @@ Table of contents
    * [Add Audio Track](#add-audio-track)
    * [Format Conversion](#format-conversion)
       * [Convert Video to MP3](#convert-video-to-mp3)
-   * [Join / Concatenate MP3 Files](#join-concatenate-mp3-files)
+   * [Join / Concatenate MP3 Files](#join--concatenate-mp3-files)
    * [Mix a Video with a Sound File](#mix-a-video-with-a-sound-file)
    * [Trim and Cut](#trim-and-cut)
    * [Resizing Video](#resizing-video)
