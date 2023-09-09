@@ -19,7 +19,7 @@ Table of contents
    * [Add Audio Track](#add-audio-track)
    * [Format Conversion](#format-conversion)
       * [Convert Video to MP3](#convert-video-to-mp3)
-   * [Join / Concatenate MP3 Files](#join-mp3-files)
+   * [Join / Concatenate MP3 Files](#join-concatenate-mp3-files)
    * [Mix a Video with a Sound File](#mix-a-video-with-a-sound-file)
    * [Trim and Cut](#trim-and-cut)
    * [Resizing Video](#resizing-video)
@@ -32,9 +32,9 @@ Table of contents
    * [Audio Slow Down](#audio-slow-down)
    * [Create a Video with Audio from an Image Still](#create-a-video-with-audio-from-an-image-still)
    * [Extract Images from a Video](#extract-images-from-a-video)
-   * [Convert DVD to mp4](#convert-video_ts-folder-to-video)
+   * [Convert VIDEO_TS folder to video](#convert-video_ts-folder-to-video)
    * [From left or right-only stereo to mono](#from-left-or-right-only-stereo-to-mono)
-   * [Normalize/Boost audio](#normalize-audio)
+   * [Normalize/Boost audio](#normalize-boost-audio)
 
 Get Video Information
 =====================
