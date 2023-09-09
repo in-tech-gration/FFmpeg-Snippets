@@ -35,6 +35,7 @@ Table of contents
    * [Convert VIDEO_TS folder to video](#convert-video_ts-folder-to-video)
    * [From left or right-only stereo to mono](#from-left-or-right-only-stereo-to-mono)
    * [Normalize/Boost audio](#normalize-boost-audio)
+   * [Convert Images into a Video](#convert-images-into-a-video)
 
 Get Video Information
 =====================
@@ -326,3 +327,10 @@ Normalize (boost) audio
   VIDEO: `ffmpeg -i original.mov -af "volume=18dB" -c:v copy -c:a aac -b:a 192k normalized.mov`
 
   [References](https://superuser.com/questions/323119/how-can-i-normalize-audio-using-ffmpeg)
+
+Convert Images into a Video
+===========================
+
+  Suppose you have images in the format: `frame01.jpg`, `frame02.jpg`, `frame03.jpg`, etc.
+
+  `ffmpeg -f image2 -i frame%d.jpg output.mp4`
