@@ -36,6 +36,7 @@ Table of contents
    * [From left or right-only stereo to mono](#from-left-or-right-only-stereo-to-mono)
    * [Normalize/Boost audio](#normalize-boost-audio)
    * [Convert Images into a Video](#convert-images-into-a-video)
+   * [Adding sound wave overlays to videos and pictures](#adding-sound-wave-overlays-to-videos-and-pictures) (Source: [Christian Heilmann](https://christianheilmann.com/2023/08/31/adding-sound-wave-overlays-to-videos-and-pictures-using-ffmpeg/))
 
 Get Video Information
 =====================
@@ -334,3 +335,28 @@ Convert Images into a Video
   Suppose you have images in the format: `frame01.jpg`, `frame02.jpg`, `frame03.jpg`, etc.
 
   `ffmpeg -f image2 -i frame%d.jpg output.mp4`
+  
+Adding Sound Wave Overlays to Videos and Pictures
+=================================================
+
+  Adding sound wave overlay to a video:
+
+  `ffmpeg -i Understandable.mp4 \
+ -filter_complex "[0:a]showwaves=colors=0xff1646@0.3\
+ :scale=sqrt:mode=cline,format=yuva420p[v];\
+ [v]scale=1280:400[bg];\
+ [v][bg]overlay=(W-w)/2:H-h[outv]"\
+  -map "[outv]" -map 0:a -c:v libx264 -c:a copy \
+  waveform-sqrt-cline.mp4`
+
+  You can find a detailed explanation for each of the parameters [here](https://christianheilmann.com/2023/08/31/adding-sound-wave-overlays-to-videos-and-pictures-using-ffmpeg/).
+
+  Adding sound wave overlay to a picture:
+
+  `ffmpeg -i Understandable.mp4  -i chris.jpg\
+ -filter_complex "[0:a]showwaves=colors=0xff1646@0.3\
+ :scale=sqrt:mode=cline,format=yuva420p[v];\
+ [1:v]scale=400:400[bg];\
+ [bg][v]overlay=(W-w)/2:(H-h)/2[outv]"\
+  -map "[outv]" -map 0:a -c:v libx264 -c:a copy \
+  static-image.mp4`
