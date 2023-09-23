@@ -404,3 +404,8 @@ static-image.mp4`
 
 </details>
 
+---
+
+If you found this resource useful, please consider [supporting our cause](https://ko-fi.com/intechgration).
+
+For more information [visit our website](https://intechgration.io/).
