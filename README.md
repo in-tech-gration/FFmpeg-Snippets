@@ -38,49 +38,66 @@ Table of contents
    * [Convert Images into a Video](#convert-images-into-a-video)
    * [Adding sound wave overlays to videos and pictures](#adding-sound-wave-overlays-to-videos-and-pictures) (Source: [Christian Heilmann](https://christianheilmann.com/2023/08/31/adding-sound-wave-overlays-to-videos-and-pictures-using-ffmpeg/))
 
+[![](./assets/The.Code.FFMpeg.Scene.jpg)](https://www.youtube.com/embed/lsCrY2vWSr8?si=uir7ltKSuvi6YdJ3&amp;start=205&end=290)
+
+[_(FFMpeg in the movies)_](https://www.youtube.com/embed/lsCrY2vWSr8?si=uir7ltKSuvi6YdJ3&amp;start=205&end=290)
+
+
 Get Video Information
 =====================
 
-  `$ ffmpeg -i filename.flv`
+<details>
 
-  `$ ffmpeg -ao dummy -vo dummy -identify filename.flv`
+<summary><h2>See details</h2></summary>
 
-  `$ ffprobe -hide_banner -stats -i toggle-custom-post-types.mp4`
+`$ ffmpeg -i filename.flv`
 
-  GET SPECIFIC INFORMATION:
+`$ ffmpeg -ao dummy -vo dummy -identify filename.flv`
 
-  `$ ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of default=nokey=1:noprint_wrappers=1 input.mp4` 
+`$ ffprobe -hide_banner -stats -i toggle-custom-post-types.mp4`
 
-  Will output: `h264`
+GET SPECIFIC INFORMATION:
 
-  `ffprobe -v error -select_streams v:0 -show_entries stream=width -of default=nokey=1:noprint_wrappers=1 toggle-custom-post-types.mp4`
+`$ ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of default=nokey=1:noprint_wrappers=1 input.mp4` 
 
-  Will output: `1280`
+Will output: `h264`
 
-  Other stream keys include: 
+`ffprobe -v error -select_streams v:0 -show_entries stream=width -of default=nokey=1:noprint_wrappers=1 toggle-custom-post-types.mp4`
 
-    codec_name=h264
-    codec_long_name=H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
-    width=1280
-    height=772
-    r_frame_rate=8/1
+Will output: `1280`
 
-  Reference: 
+Other stream keys include: 
 
-  [Is there a way to use ffmpeg to determine the encoding of a file before transcoding?](https://stackoverflow.com/questions/5618363/is-there-a-way-to-use-ffmpeg-to-determine-the-encoding-of-a-file-before-transcod)
+  codec_name=h264
+  codec_long_name=H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+  width=1280
+  height=772
+  r_frame_rate=8/1
+
+**References:** 
+
+[Is there a way to use ffmpeg to determine the encoding of a file before transcoding?](https://stackoverflow.com/questions/5618363/is-there-a-way-to-use-ffmpeg-to-determine-the-encoding-of-a-file-before-transcod)
+
+</details>
+
 
 Grab Frame Thumbnail    
 ====================
 
-  `$ ffmpeg -i input.mov -vframes 1 -s 320x240 -ss 10 thumb.jpg`
+<details>
 
-  -vframes  *Single Frame*<br/>
-  -ss       *Offset*
+<summary><h2>See details</h2></summary>
 
-  `$ ffmpeg -i rtmp://streamurl -r 1 frames/%04d-frame.png`
+`$ ffmpeg -i input.mov -vframes 1 -s 320x240 -ss 10 thumb.jpg`
 
-  This will consume the stream at rtmp://streamurl and output it as one PNG per second.
+-vframes  *Single Frame*<br/>
+-ss       *Offset*
 
+`$ ffmpeg -i rtmp://streamurl -r 1 frames/%04d-frame.png`
+
+This will consume the stream at rtmp://streamurl and output it as one PNG per second.
+
+</details>
 
 Add Audio Track
 ===============
