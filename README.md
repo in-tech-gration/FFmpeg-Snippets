@@ -364,6 +364,8 @@ This command will take 25 images images every second beginning at the tenth seco
 
 VIDEO: `ffmpeg -i original.mov -af "volume=18dB" -c:v copy -c:a aac -b:a 192k normalized.mov`
 
+**Important:** watch out for the typos, e.g. `18db` will fail, since the correct syntax is `18dB` (uppercase B). 
+
 [References](https://superuser.com/questions/323119/how-can-i-normalize-audio-using-ffmpeg)
 
 </details>
