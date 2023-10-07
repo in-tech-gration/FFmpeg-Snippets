@@ -408,6 +408,13 @@ static-image.mp4`
 
 ---
 
+TODO
+====
+
+- Add entry about detecting the volume. Based on [this post](https://creatomate.com/blog/how-to-change-the-volume-of-a-media-file-using-ffmpeg) 
+
+---
+
 If you found this resource useful, please consider [supporting our cause](https://ko-fi.com/intechgration).
 
 For more information [visit our website](https://intechgration.io/).
