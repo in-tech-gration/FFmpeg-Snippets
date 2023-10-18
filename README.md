@@ -366,6 +366,17 @@ VIDEO: `ffmpeg -i original.mov -af "volume=18dB" -c:v copy -c:a aac -b:a 192k no
 
 **Important:** watch out for the typos, e.g. `18db` will fail, since the correct syntax is `18dB` (uppercase B). 
 
+We also have created a handy shell (zsh) script that will normalize a file like this:
+
+```bash
+normalize file.mov
+# Will create a file file.normalized.mov, normalized at 16dB (default)
+normalize --db 12 movie.mp4
+# Will create a file movie.normalized.mp4, normalized at 12dB
+```
+
+You can find the file here: [./scripts/normalize.sh](./scripts/normalize.sh)
+
 [References](https://superuser.com/questions/323119/how-can-i-normalize-audio-using-ffmpeg)
 
 </details>
