@@ -170,6 +170,10 @@ Reference: [How to concatenate two MP4 files using FFmpeg?](https://stackoverflo
 
 `$ ffmpeg -i audio.wav -i video.avi output.mpg`
 
+Copy the audio without re-encoding:
+
+`$ ffmpeg -i audio.wav -i video.avi -c copy output.mpg`
+
 </details>
 
 <details>
