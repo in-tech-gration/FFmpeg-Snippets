@@ -355,7 +355,13 @@ This command will take 25 images images every second beginning at the tenth seco
 
 `ffmpeg -i INPUT.mp4 -c:v copy -ac 1 OUTPUT.mp4`
 
+To stereo: `-ac 2`
+
 [References](https://www.youtube.com/watch?v=IyQD6mYqrYA)
+
+To copy [one channel to another](https://stackoverflow.com/questions/72017335/how-to-duplicate-audio-channel-in-stereo-audio-in-video-with-ffmpeg), e.g. copy the Left Audio channel to the Right, use this:
+
+`ffmpeg -i input.mp4 -c:v copy -af "pan=stereo|FL=FL|FR=FL"  output.mp4`
 
 </details>
 
