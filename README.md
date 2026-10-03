@@ -346,6 +346,33 @@ MIX AUDIO AND VIDEO
 
 </details>
 
+<details open>
+  <summary><h2>Extract Audio from a Video</h2></summary>
+
+  Copy existing track into an audio file:
+
+  `ffmpeg -i in.mp4 -vn -c:a copy out.m4a`
+  _(copy existing AAC track into an .m4a)_
+
+  `-vn`: strips video; the output keeps audio only.
+  `-c:a`: copy extracts losslessly when the container supports the codec.
+
+  Convert to another format (MP3, AAC, WAV, etc.)
+
+  Convert to high-quality (VBR) MP3: `ffmpeg -i in.mp4 -vn -c:a libmp3lame -q:a 2 out.mp3`
+
+  `-q:a` for MP3 quality (0 = best, 9 = smallest).
+
+  Convert to AAC at 192k: `ffmpeg -i in.mp4 -vn -c:a aac -b:a 192k out.m4a`
+
+  Convert to uncompressed WAV: `ffmpeg -i in.mp4 -vn -c:a pcm_s16le out.wav`
+
+  Extract part of the audio _(00:30 to 01:00 as MP3)_: `ffmpeg -ss 00:00:30 -to 00:01:00 -i in.mp4 -vn -c:a libmp3lame -q:a 2 clip.mp3`
+
+  [Source](https://www.ffmpeglab.com/articles/ffmpeg-extract-audio-from-video.html)
+
+</details>
+
 <details>
 <summary><h2>Convert VIDEO_TS folder to video</h2></summary>
 
