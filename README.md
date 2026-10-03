@@ -336,9 +336,9 @@ MIX AUDIO AND VIDEO
 
   You can also give a start time and the duration with the flags:
 
-  -ss position Seek to given time position in seconds. “hh:mm:ss[.xxx]” syntax is also supported.
+  `-ss` position Seek to given time position in seconds. `hh:mm:ss[.xxx]` syntax is also supported.
 
-  -t duration Restrict the transcoded/captured video sequence to the duration specified in seconds. “hh:mm:ss[.xxx]” syntax is also supported.
+  `-t` duration Restrict the transcoded/captured video sequence to the duration specified in seconds. `hh:mm:ss[.xxx]` syntax is also supported.
 
   This command will take 25 images images every second beginning at the tenth second, and continuing for 5 seconds
 
