@@ -32,6 +32,7 @@ Table of contents
    * [Audio Slow Down](#audio-slow-down)
    * [Create a Video with Audio from an Image Still](#create-a-video-with-audio-from-an-image-still)
    * [Extract Images from a Video](#extract-images-from-a-video)
+   * [Extract Audio from a Video](#extract-audio)
    * [Convert VIDEO_TS folder to video](#convert-video_ts-folder-to-video)
    * [From left or right-only stereo to mono](#from-left-or-right-only-stereo-to-mono)
    * [Normalize/Boost audio](#normalize-boost-audio)
@@ -321,27 +322,27 @@ MIX AUDIO AND VIDEO
 </details>
 
 <details>
-<summary><h2>Extract Images from a Video</h2></summary>
+  <summary><h2>Extract Images from a Video</h2></summary>
 
-`$ ffmpeg -i input.mpg image%d.jpg`
+  `$ ffmpeg -i input.mpg image%d.jpg`
 
-This will create 25 images for every 1 second, but it may serve us to have more or less images, this can be achieved with the parameter -r
+  This will create 25 images for every 1 second, but it may serve us to have more or less images, this can be achieved with the parameter -r
 
--r fps *Set frame rate (default 25)*
+  -r fps *Set frame rate (default 25)*
 
-`$ ffmpeg -i test.mpg -r 1 image%d.jpg`
+  `$ ffmpeg -i test.mpg -r 1 image%d.jpg`
 
-With this command you’ll get 1 image for every second.
+  With this command you’ll get 1 image for every second.
 
-You can also give a start time and the duration with the flags:
+  You can also give a start time and the duration with the flags:
 
--ss position Seek to given time position in seconds. “hh:mm:ss[.xxx]” syntax is also supported.
+  -ss position Seek to given time position in seconds. “hh:mm:ss[.xxx]” syntax is also supported.
 
--t duration Restrict the transcoded/captured video sequence to the duration specified in seconds. “hh:mm:ss[.xxx]” syntax is also supported.
+  -t duration Restrict the transcoded/captured video sequence to the duration specified in seconds. “hh:mm:ss[.xxx]” syntax is also supported.
 
-This command will take 25 images images every second beginning at the tenth second, and continuing for 5 seconds
+  This command will take 25 images images every second beginning at the tenth second, and continuing for 5 seconds
 
-`$ ffmpeg -i test.mpg -r 25 -ss 00:00:10 -t 00:00:05 images%05d.png`
+  `$ ffmpeg -i test.mpg -r 25 -ss 00:00:10 -t 00:00:05 images%05d.png`
 
 </details>
 
